@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { getProjects } from '../../../lib/projects-db';
 
 async function ProjectsList() {
-  const projects = await getProjects();
+  const projects = await getProjects('opensource');
 
   return (
     <div className="grid gap-4">
@@ -42,7 +42,7 @@ async function ProjectsList() {
 export default function ProjectsPage() {
   return (
     <main className="p-6">
-      <h1 className="mb-6 text-2xl font-bold">All Projects</h1>
+      <h1 className="mb-6 text-2xl font-bold">Open Source Projects</h1>
       <Suspense fallback={<p className="text-zinc-500">Loading projects...</p>}>
         <ProjectsList />
       </Suspense>

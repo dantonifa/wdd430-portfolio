@@ -3,7 +3,7 @@ import { getProjects } from '../../lib/projects-db';
 
 async function ProjectsList() {
   const projects = await getProjects();
-
+  // ...
   return (
     <div className="grid gap-4">
       {projects.map((project) => (
